@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DescreteMathsCompanion</string>
+
+    //place-holder text
+    <string name="divisors">Please enter a single number</string>
+    <string name="gcd">the gcd is: </string>
+    <string name="lcm">the lcm is: </string>
+    <string name="prime_factors">the prime factors are: </string>
+    <string name="introduction"> please choose one of the options below.</string>
+
+    //instructions text
+    <string name="gcd_instructions">please enter values, separated by commas.</string>
+    <string name="placeholder_value">0</string>
+    <string name="divisors_result">divisors are:\n</string>
+    <string name="divisors_button">Find divisors</string>
+
+    //menu item text
+    <string name="menu_home">Home</string>
+    <string name="menu_gcd">GCD</string>
+    <string name="menu_lcm">LCM</string>
+    <string name="menu_prime_factors">Prime factors</string>
+    <string name="menu_divisors">Divisors</string>
+    <string name="lcm_instruction">Please enter numbers seperated by commas:</string>
+
+    //Button texts
+    <string name="lcm_button">Calculate lcm</string>
+</resources>

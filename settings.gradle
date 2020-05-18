@@ -1,0 +1,2 @@
+rootProject.name='DescreteMathsCompanion'
+include ':app'
