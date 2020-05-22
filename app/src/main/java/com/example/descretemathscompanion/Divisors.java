@@ -40,28 +40,44 @@ public class Divisors extends Fragment
                          @Override
                          public void onClick(View v)
                              {
-                                 onDivisorClick();
+                                 tryOnDivisorClick();
                              }
                      });
                 return inf;
             }
 
-        public void onDivisorClick()
+        public void onDivisorClick() throws UnformattedInputException
             {
+                /*
+                create a linked list
+                fill it using getDivisors
+                create an output string
+                format is using formatOutput
+                 */
+                String inputString = input.getText().toString();
+                Utils.handleUnformattedInputOfSingle(inputString);
                 LinkedList<Integer> divisors= new LinkedList<Integer>();
-                int num=readInput();
-                divisors=getDivisors(num);
-                if (divisors.size()>1)
-                    {
-                        String resultString=Utils.formatOutput(divisors);
-                        displayResult(resultString);
-                    }
-                else displayResult(String.valueOf(divisors.get(0)));
+
+                divisors=getDivisors();
+                String output=Utils.formatOutput(divisors);
+                displayResult(output);
             }
 
 
-        public LinkedList<Integer> getDivisors(int num)
+        public void tryOnDivisorClick()
             {
+                try { onDivisorClick(); }
+                 catch (UnformattedInputException e)
+                     {
+                         String message=e.getMessage();
+                         Toast.makeText(getContext(),message,Toast.LENGTH_SHORT).show();
+                     }
+            }
+
+        public LinkedList<Integer> getDivisors()
+            {
+                String inputString = input.getText().toString();
+                int num= Integer.parseInt(inputString);
               LinkedList<Integer> divisors=new LinkedList<Integer>();
                 //check if the number is prime.
               if (Utils.isPrime(num))
@@ -79,13 +95,6 @@ public class Divisors extends Fragment
                     }
                 return divisors;
             }
-
-
-        public int readInput()
-            {
-                return Integer.parseInt(input.getText().toString());
-            }
-
 
         public void displayResult(String resultString)
             {

@@ -36,17 +36,35 @@ public class GCD extends Fragment
                         @Override
                         public void onClick(View v)
                             {
-                                //generate the number list using generateNumberListFromInput
-                                //Calculate total GCD using gcdOfMultiple.
-                                //print result to screen using
-                                int gcd;
-                                LinkedList<Integer> numberList=Utils.generateNumberListFromInput(input.getText().toString());
-                                gcd=Utils.gcdOfMultiple(numberList);
-                                displayResult(gcd);
+                                tryOnGcdClick();
                             }
                     });
                 return inf;
+            };
+        public void onGcdClick() throws UnformattedInputException
+            {
+                //generate the number list using generateNumberListFromInput
+                //Calculate total GCD using gcdOfMultiple.
+                //print result to screen using displayResult.
+                String inputString = input.getText().toString();
+                Utils.handleUnformattedInputOfMultiple(inputString);
+
+                int gcd;
+                LinkedList<Integer> numberList=Utils.generateNumberListFromInput(inputString);
+                gcd=Utils.gcdOfMultiple(numberList);
+                displayResult(gcd);
             }
+
+        public void tryOnGcdClick()
+            {
+                try {   onGcdClick(); }
+                catch(UnformattedInputException e)
+                    {
+                        String toasty=e.getMessage();
+                        Toast.makeText(getContext(), toasty, Toast.LENGTH_SHORT).show();
+                    }
+            }
+
         public void displayResult(int num)
             {
                 result.setText(String.valueOf(num));

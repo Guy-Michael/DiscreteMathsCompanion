@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,30 +35,50 @@ public class LCM extends Fragment
                         @Override
                         public void onClick(View v)
                             {
-                                calculateLCM();
+                                tryOnLcmClick();
                             }
                     });
                 return inf;
             }
 
-        public void calculateLCM()
+        public void onLcmClick()
             {
-                String unformattedInput=input.getText().toString();
-                LinkedList<Integer> numberList= Utils.generateNumberListFromInput(unformattedInput);
+                String inputString=input.getText().toString();
+                Utils.handleUnformattedInputOfMultiple(inputString);
 
-                //actual calculation
-                int lcm=multiplyLcmNumbers(numberList)/Utils.gcdOfMultiple(numberList);
+                int lcm;
+                LinkedList<Integer> numberList=Utils.generateNumberListFromInput(inputString);
+                lcm=lcmOfMultiple(numberList);
                 displayLCM(lcm);
             }
+         private int lcm(int num1, int num2)
+             {
+                 int multiple=num1*num2;
+                 int lcm=multiple/Utils.gcd(num1,num2);
+                 return lcm;
+             }
 
-        public int multiplyLcmNumbers(LinkedList<Integer> numberList)
+        public void tryOnLcmClick()
             {
-                int multiple=1;
-                for (int i =0; i<numberList.size();i++)
+                try {  onLcmClick(); }
+                catch(UnformattedInputException e)
+                    {   Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_SHORT).show();  }
+            }
+
+        public int lcmOfMultiple(LinkedList<Integer> numberList)
+            {
+                //if only 1 element
+                if (numberList.size()==1)
+                    return numberList.get(0);
+
+                //set beginning value to first element
+                int lcm=numberList.get(0);
+
+                for (int i =1; i <numberList.size(); i++)
                     {
-                        multiple*=numberList.get(i);
+                        lcm=lcm(lcm,numberList.get(i));
                     }
-                return multiple;
+                return lcm;
             }
 
         public void displayLCM(int num)
@@ -65,7 +86,4 @@ public class LCM extends Fragment
                 String resultStr=String.valueOf(num);
                 output.setText("LCM is: "+resultStr);
             }
-
-      //  public void
-
     }

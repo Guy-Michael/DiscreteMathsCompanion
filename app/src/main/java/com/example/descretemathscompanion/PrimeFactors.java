@@ -33,7 +33,7 @@ public class PrimeFactors extends Fragment
                         @Override
                         public void onClick(View v)
                             {
-                                onPrimeFactorsClick();
+                                tryOnPrimeFactorsClick();
                             }
                     });
 
@@ -48,6 +48,15 @@ public class PrimeFactors extends Fragment
                 inputStr=Utils.formatOutput(primeFactors);
                 displayOutput(inputStr);
             }
+
+        public void tryOnPrimeFactorsClick()
+            {
+                String inputString = input.getText().toString();
+                Utils.handleUnformattedInputOfSingle(inputString);
+
+                onPrimeFactorsClick();
+            }
+
         public LinkedList<Integer> findPrimeFactors(String input)
             {
                 LinkedList<Integer> primeFactors= new LinkedList<Integer>();
