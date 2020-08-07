@@ -24,4 +24,5 @@
 
     //Button texts
     <string name="lcm_button">Calculate lcm</string>
+    <string name="clear">Clear</string>
 </resources>
