@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/holo_blue_light">
 
 
     <TextView
         android:id="@+id/gcd_result"
-        android:layout_width="211dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_row="1"
-        android:layout_column="1"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="370dp"
-        android:background="@android:color/white"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="330dp"
         android:text="@string/gcd"
         android:textSize="30sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="73dp"
-        android:layout_row="1"
-        android:layout_column="1"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -37,36 +30,29 @@
 
     <EditText
         android:id="@+id/gcd_input"
-        android:layout_width="306dp"
-        android:layout_height="58dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="252dp"
+        android:layout_height="161dp"
         android:layout_alignParentTop="true"
-
         android:layout_alignParentEnd="true"
+
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="242dp"
-        android:layout_marginEnd="164dp"
-        android:background="@android:color/white"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="87dp"
         android:textSize="25sp" />
 
     <Button
         android:id="@+id/gcd_button_calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
 
 
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="447dp"
         android:text="calculate GCD" />
-
-
-
-
 
 
 </RelativeLayout>
