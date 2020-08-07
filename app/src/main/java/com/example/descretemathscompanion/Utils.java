@@ -1,6 +1,6 @@
 package com.example.descretemathscompanion;
 
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 import java.util.LinkedList;
 
@@ -117,8 +117,8 @@ public class Utils
                     { throw new UnformattedInputException("Please enter whole numbers only."); }
 
                 //text ends with a comma
-                if (StringUtils.isAlpha(inputString))
-                    { throw new UnformattedInputException("Please enter whole numbers only."); };
+              //  if (StringUtils.isAlpha(inputString))
+                //    { throw new UnformattedInputException("Please enter whole numbers only."); };
             }
 
         public static void handleUnformattedInputOfSingle(String inputString) throws UnformattedInputException
