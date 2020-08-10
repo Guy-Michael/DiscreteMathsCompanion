@@ -5,21 +5,21 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light">
+    android:background="@color/backgroundColor">
 
 
     <TextView
-        android:id="@+id/gcd_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/gcd"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintVertical_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -35,16 +35,17 @@
     <Button
         android:id="@+id/gcd_button_calculate"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="143dp"
-        android:layout_height="56dp"
-        android:background="@android:color/holo_purple"
-        android:text="Calculate gcd"
+        android:layout_width="142dp"
+        android:layout_height="45dp"
+        android:background="@color/buttonColor"
+        android:text="@string/gcd_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintVertical_bias="0.344"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
+        />
 
     <EditText
         android:id="@+id/gcd_input"
@@ -52,12 +53,41 @@
         android:layout_height="46dp"
         android:background="@android:color/white"
         android:ems="10"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintVertical_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+         />
+
+    <TextView
+        android:id="@+id/gcd_result"
+        android:layout_width="325dp"
+        android:layout_height="100dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintVertical_bias="0.589"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="386dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,4 +25,9 @@
     //Button texts
     <string name="lcm_button">Calculate lcm</string>
     <string name="find_prime_factors">Prime Factors</string>
+    <string name="prime_factors_instructions">Enter a single number</string>
+    <string name="gcd_button">Calculate gcd</string>
+
+    //location information
+    <string name="size_width_inputField">"325dp"</string>
 </resources>
