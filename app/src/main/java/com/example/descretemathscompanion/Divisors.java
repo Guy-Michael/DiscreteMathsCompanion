@@ -3,6 +3,7 @@ package com.example.descretemathscompanion;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,7 +99,8 @@ public class Divisors extends Fragment
 
         public void displayResult(String resultString)
             {
-                result.setText("Divisors are:\n"+resultString);
+                result.setMovementMethod(new ScrollingMovementMethod());
+                result.setText(resultString);
             }
 
 

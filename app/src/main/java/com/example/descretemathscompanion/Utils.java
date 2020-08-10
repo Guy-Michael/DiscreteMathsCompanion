@@ -2,6 +2,8 @@ package com.example.descretemathscompanion;
 
 //import org.apache.commons.lang3.StringUtils;
 
+import android.widget.Toast;
+
 import java.util.LinkedList;
 
 public class Utils
@@ -118,16 +120,31 @@ public class Utils
 
                 else if (inputString.contains("\n"))
                     { throw new UnformattedInputException("Please enter numbers in a single line."); }
+
                 //text ends with a comma
-              //  if (StringUtils.isAlpha(inputString))
-                //    { throw new UnformattedInputException("Please enter whole numbers only."); };
+                else if (inputString.charAt(inputString.length()-1)==',')
+                    { throw new UnformattedInputException("please end input with a number."); }
+
+                //text contains other symbols.
+                for (int i=0; i<inputString.length(); i++)
+                    {
+                        if ((inputString.charAt(i)<'0' || inputString.charAt(i) >'9') && (inputString.charAt(i)!=','))
+                            {
+                                System.out.println(inputString.charAt(i));
+                                throw new UnformattedInputException("Please enter numbers and commas only."); }
+                    }
+
+
             }
 
         public static void handleUnformattedInputOfSingle(String inputString) throws UnformattedInputException
             {
-                //more than one number
-                if (inputString.contains(" ") || inputString.contains(","))
-                    { throw new UnformattedInputException("Please enter a single number only."); }
+                //text contains other symbols.
+                for (int i=0; i<inputString.length(); i++)
+                    {
+                        if (inputString.charAt(i)<'0' || inputString.charAt(i) >'9')
+                            {throw new UnformattedInputException("Please enter a single number only."); }
+                    }
 
                 //number is a fraction
                 if (inputString.contains("."))

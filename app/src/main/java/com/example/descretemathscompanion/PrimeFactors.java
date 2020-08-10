@@ -1,6 +1,7 @@
 package com.example.descretemathscompanion;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,7 +77,8 @@ public class PrimeFactors extends Fragment
 
         public void displayOutput(String result)
             {
-                output.setText("Prime factors are:\n" +result);
+                output.setMovementMethod(new ScrollingMovementMethod());
+                output.setText(result);
             }
 
     }

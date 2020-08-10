@@ -84,6 +84,6 @@ public class LCM extends Fragment
         public void displayLCM(int num)
             {
                 String resultStr=String.valueOf(num);
-                output.setText("LCM is: "+resultStr);
+                output.setText(resultStr);
             }
     }

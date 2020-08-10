@@ -5,7 +5,8 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundColor">
+    android:background="@color/backgroundColor"
+ >
 
 
     <TextView
@@ -39,7 +40,7 @@
         android:layout_width="142dp"
         android:layout_height="45dp"
         android:background="@color/buttonColor"
-        android:text="find divisors"
+        android:text="@string/divisors_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.881"
@@ -53,8 +54,9 @@
         android:layout_width="159dp"
         android:layout_height="46dp"
         android:background="@android:color/white"
+
         android:ems="10"
-        android:inputType="number"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.063"
@@ -63,12 +65,15 @@
         app:layout_constraintTop_toTopOf="parent"
  />
 
+
+
     <TextView
         android:id="@+id/divisors_result"
         android:layout_width="325dp"
         android:layout_height="100dp"
+        android:textSize="20dp"
+        android:scrollbars="vertical"
         android:background="@android:color/white"
-        android:padding="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
