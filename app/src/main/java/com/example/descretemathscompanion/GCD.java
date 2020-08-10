@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.button.MaterialButton;
+
 import java.util.LinkedList;
 
 public class GCD extends Fragment
@@ -29,7 +31,7 @@ public class GCD extends Fragment
                 View inf =inflater.inflate(R.layout.gcd,container,false);
                 result=inf.findViewById(R.id.gcd_result);
                 input=inf.findViewById(R.id.gcd_input);
-                calculateGCD=inf.findViewById(R.id.gcd_button_calculate);
+                calculateGCD= inf.findViewById(R.id.gcd_button_calculate);
 
                 calculateGCD.setOnClickListener(new View.OnClickListener()
                     {
@@ -40,7 +42,7 @@ public class GCD extends Fragment
                             }
                     });
                 return inf;
-            };
+            }
         public void onGcdClick() throws UnformattedInputException
             {
                 //generate the number list using generateNumberListFromInput

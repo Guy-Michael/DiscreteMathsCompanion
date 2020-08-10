@@ -109,13 +109,15 @@ public class Utils
                     { throw new UnformattedInputException("Please seperate number with a comma"); }
 
                 //no text at all
-                if(inputString.length()==0)
+                else if(inputString.length()==0)
                     { throw new UnformattedInputException("Number field is empty!"); }
 
                 //numbers are not whole
-                if (inputString.contains(".") || inputString.contains("/"))
+                else if (inputString.contains(".") || inputString.contains("/"))
                     { throw new UnformattedInputException("Please enter whole numbers only."); }
 
+                else if (inputString.contains("\n"))
+                    { throw new UnformattedInputException("Please enter numbers in a single line."); }
                 //text ends with a comma
               //  if (StringUtils.isAlpha(inputString))
                 //    { throw new UnformattedInputException("Please enter whole numbers only."); };
