@@ -2,15 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/gcd"
+        android:title="@string/menu_gcd"
+        android:icon="@drawable/ic_gcd"
+        />
+
+
+    <item
         android:id="@+id/lcm"
         android:title="@string/menu_lcm"
-        android:icon="@drawable/up_arrow"
+        android:icon="@drawable/ic_lcm"
         />
 
     <item
-        android:id="@+id/gcd"
-        android:title="@string/menu_gcd"
-        android:icon="@drawable/left_arrow"
+        android:id="@+id/divisors"
+        android:title="@string/menu_divisors"
+        android:icon="@drawable/right_arrow"
         />
 
     <item
@@ -19,10 +26,6 @@
         android:icon="@drawable/down_arrow"
     />
 
-    <item
-        android:id="@+id/divisors"
-        android:title="@string/menu_divisors"
-        android:icon="@drawable/right_arrow"
-     />
+
 
 </menu>

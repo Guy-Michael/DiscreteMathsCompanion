@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">DescreteMathsCompanion</string>
+    <string name="app_name">Discrete Maths Companion</string>
 
     //place-holder text
-    <string name="divisors">Please enter a single number</string>
+    <string name="divisors">Find all the divisors of a single number.</string>
     <string name="gcd">the gcd is: </string>
     <string name="lcm">the lcm is: </string>
     <string name="prime_factors">the prime factors are: </string>
-    <string name="introduction"> please choose one of the options below.</string>
+    <string name="introduction"> Welcome to the Discrete Maths Companion App! \n Choose which calculation you would like to preform:\n find GCD, find LCM, find divisors, find prime factors: </string>
 
     //instructions text
-    <string name="gcd_instructions">please enter values, separated by commas.</string>
+    <string name="gcd_instructions">Find the Greatest Common Divisor (GCD) of 2 or more numbers.</string>
     <string name="placeholder_value">0</string>
     <string name="divisors_result">divisors are:\n</string>
     <string name="divisors_button">Find divisors</string>
@@ -20,12 +20,12 @@
     <string name="menu_lcm">LCM</string>
     <string name="menu_prime_factors">Prime factors</string>
     <string name="menu_divisors">Divisors</string>
-    <string name="lcm_instruction">Please enter numbers seperated by commas:</string>
+    <string name="lcm_instruction">Find the Lowest Common Multiple (LCM) of 2 or more numbers.</string>
 
     //Button texts
     <string name="lcm_button">Calculate lcm</string>
     <string name="find_prime_factors">Prime Factors</string>
-    <string name="prime_factors_instructions">Enter a single number</string>
+    <string name="prime_factors_instructions">Find the prime factors of a single number.</string>
     <string name="gcd_button">Calculate gcd</string>
 
     //location information
